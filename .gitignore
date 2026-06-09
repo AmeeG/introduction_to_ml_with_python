@@ -1,3 +1,57 @@
-*.pyc
-*.swp
+# ==============================================================================
+# VS CODE RULES (gemini made this I added a few bits in
+# ==============================================================================
+
+# Ignore the entire local settings and history folder
+.vscode/*
+settings.json
+
+# Ignore local history logs created by VS Code extensions (e.g., GitLens, Local History)
+.history/
+*.code-workspace
+
+# Ignore diagnostic crash dumps and logs
+.vscode-test/
+.vscode-insiders/
+
+# ==============================================================================
+# MACHINE LEARNING / PYTHON JUPYTER EXTENSION RULES
+# ==============================================================================
+
+# Ignore Jupyter Notebook checkpoints and hidden cache states
 .ipynb_checkpoints/
+.virtual_documents/
+
+# Ignore Python compiled byte code and runtime caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+*.pyc   # Ignore compiled Python files
+*.pyo   # Ignore optimized Python files
+*.pyd   # Ignore Python dynamic libraries
+
+# Ignore local environment data
+.conda/
+.venv/
+venv/
+env/
+
+# ==============================================================================
+# SYSTEM & SECURITY (CRITICAL SAFETY NET)
+# ==============================================================================
+
+# Never commit local environment secrets
+.env
+.env.*
+*.secret
+
+# Windows/Mac operating system clutter
+.DS_Store
+Thumbs.db
+*.swp #vim swap files
+*.tmp #temporary files
+*.log #log files
+*.cache #cache files
+*.bak #backup files
